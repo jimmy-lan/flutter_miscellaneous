@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +16,13 @@ class MyAppState extends State {
     "This is text 1.",
     "This is text 2."
   ];
-  final int _textIndex = 0;
+  int _textIndex = 0;
+
+  void onTogglePressed() {
+    setState(() {
+      _textIndex = 1 - _textIndex;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +32,7 @@ class MyAppState extends State {
         body: Column(
           children: [
             Text(_textContents[_textIndex]),
-            ElevatedButton(onPressed: null, child: Text("Toggle Text"))
+            ElevatedButton(onPressed: onTogglePressed, child: Text("Toggle Text"))
           ],
         ),
       ),
