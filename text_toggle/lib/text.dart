@@ -10,7 +10,7 @@ class TextDisplay extends StatelessWidget {
     return Container(
       margin: EdgeInsets.all(20),
       child: Center(
-        child: Text(text),
+        child: Text(text, style: TextStyle(fontSize: 24),),
       ),
     );
   }
