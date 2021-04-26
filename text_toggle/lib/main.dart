@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:text_toggle/text_control.dart';
 
 void main() {
   runApp(MyApp());
@@ -32,7 +33,7 @@ class MyAppState extends State {
         body: Column(
           children: [
             Text(_textContents[_textIndex]),
-            ElevatedButton(onPressed: onTogglePressed, child: Text("Toggle Text"))
+            TextControl(onPress: onTogglePressed, text: "Toggle Text",)
           ],
         ),
       ),
