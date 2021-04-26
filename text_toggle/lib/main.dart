@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:text_toggle/text.dart';
 import 'package:text_toggle/text_control.dart';
 
 void main() {
@@ -32,7 +33,7 @@ class MyAppState extends State {
         appBar: AppBar(title: Text("Text Toggle")),
         body: Column(
           children: [
-            Text(_textContents[_textIndex]),
+            TextDisplay(text: _textContents[_textIndex]),
             TextControl(onPress: onTogglePressed, text: "Toggle Text",)
           ],
         ),
